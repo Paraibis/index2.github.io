@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations de voyage</title>
+    <link rel="stylesheet" href="styles.css">
+
+   
+</head>
+
+<body>
+
+
+    <center>
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+    </center>
+    
+    <!-- Menu -->
+    
+    
+    <center>
+    
+        <nav class="menudusite">
+            <ul>
+                <li><a href="index.html">ACCUEIL</a></li>
+    
+    
+                <!-- Menu -->
+    
+    <li class="dropdown">
+        <a href="#" class="dropbtn">DESTINATIONS</a>
+        <div class="dropdown-content">
+            <a href="tokyo.html">TOKYO</a>
+            <a href="newyork.html">NEWYORK</a>
+            <a href="singapour.html">SINGAPOUR</a>
+            <a href="moscou.html">MOSCOU</a>
+            <a href="montreal.html">MONTREAL</a>
+        </div>
+    </li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    
+    
+    </center>
+    
+    
+         <!-- SLIDER DE CONTACT -->
+    
+        <div class="slider-container">
+            <div class="slider">
+                
+                <div class="slide" style="background-image: url('R.jpeg\ sing.jpeg');">
+                    <div class="slide-content">
+                        <h1 style="color: rgb(10, 5, 8);">Bienvenue à Singapour, la ville-jardin d'Asie</h1>
+                    </div>
+                </div>
+                <!-- Ajoutez plus de diapositives au besoin -->
+            </div>
+            <div class="pagination"></div>
+        </div>
+    
+        
+    
+        <script>
+            const slides = document.querySelectorAll('.slide');
+            const pagination = document.querySelector('.pagination');
+    
+            slides.forEach((slide, index) => {
+                const button = document.createElement('button');
+                button.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+                pagination.appendChild(button);
+            });
+    
+            let slideIndex = 0;
+            const updatePagination = () => {
+                const buttons = pagination.querySelectorAll('button');
+                buttons.forEach((button, index) => {
+                    if (index === slideIndex) {
+                        button.classList.add('active');
+                    } else {
+                        button.classList.remove('active');
+                    }
+                });
+            };
+    
+            const goToSlide = (index) => {
+                slideIndex = index;
+                const slideWidth = slides[0].clientWidth;
+                document.querySelector('.slider').style.transform = `translateX(${-slideWidth * index}px)`;
+                updatePagination();
+            };
+    
+            updatePagination();
+    
+            // Auto play
+            setInterval(() => {
+                slideIndex = (slideIndex + 1) % slides.length;
+                goToSlide(slideIndex);
+            }, 5000);
+        </script>
+
+
+
+
+         <!-- description 01 tokyo -->
+
+
+
+
+<div class="clearfix"></div>
+
+<div class="div-categoryContainer">
+
+    <div class="content-wrapper">
+        
+        <h1 class="titredetokyo">01</h1>
+        &nbsp 
+        &nbsp 
+        <p>Singapour est une métropole dynamique et diversifiée,elle est célèbre pour son impressionnante skyline, 
+          ponctuée de gratte-ciels emblématiques tels que la tour Marina Bay Sands et le parc Gardens by the Bay,
+           où des jardins verticaux et des structures futuristes s'entremêlent pour créer un paysage urbain à couper le souffle.
+            Les touristes peuvent se perdre dans les rues animées de Chinatown, Little India et Kampong Glam,
+           où l'histoire et la culture de Singapour prennent vie à travers des temples colorés, 
+           des boutiques pittoresques et une cuisine de rue délicieuse.</p>
+
+        <img src="OIP.jpeg  sig.jpeg" alt="Description de l'image" class="tokyoimg">
+    </div>
+</div>
+
+
+
+
+         <!-- description 02 tokyo -->
+
+
+
+         <div class="clearfix"></div>
+
+         <div class="div-categoryContainer">
+         
+             <div class="content-wrapper">
+                 <img src="OIP.jpeg hotel sigapour.jpeg" alt="Description de l'image" class="tokyoimg" style="float: left;>
+                 
+                 <div style="float: left;">
+                     <h1 class="titredetokyo">02</h1>
+                     <p>Découvrez le luxe et le confort des hôtels à Singapour, où l'hospitalité rencontre l'élégance pour créer une expérience de séjour inoubliable.
+
+                      Que vous recherchiez une escapade de luxe ou un hébergement abordable, Singapour offre une gamme d'options d'hébergement pour répondre à tous les besoins et préférences.
+                       Les hôtels cinq étoiles de renommée mondiale, tels que le Marina Bay Sands et le Raffles Hotel, offrent un service impeccable, 
+                      des équipements de premier ordre et des vues à couper le souffle sur la skyline scintillante de la ville.</p>
+                 </div>
+             </div>
+         </div>
+
+
+
+
+
+          <!-- description 03 tokyo -->
+
+
+
+
+<div class="clearfix"></div>
+
+<div class="div-categoryContainer">
+
+    <div class="content-wrapper">
+        
+        <h1 class="titredetokyo">03</h1>
+        &nbsp 
+        &nbsp 
+        <p>Manger à Singapour est un réel plaisir dû a la présence de diverses cultures. Et si vous discutez avec des Singapouriens,
+           vous vous rendrez compte que manger, où manger, quoi manger est un de leurs sujets de discussion favoris 
+           et bon nombre de Singapouriens sont en fait de gros gourmands qui adorent makan ("manger" en malais). 
+           La cuisine de Singapour est un mélange unique des cuisines traditionnelles issues des quatre coins du monde,
+           Vous y trouverez donc des plats chinois, malais, indiens, japonais, thaïs, italiens, français et américains entre autres. </p>
+
+        <img src="CUISINE SINGAPOUR.webp" alt="Description de l'image" class="tokyoimg" class="zoom">
+    </div>
+</div>
+
+
+
+
+         <!-- description 04 tokyo -->
+
+
+
+         <div class="clearfix"></div>
+
+         <div class="div-categoryContainer">
+         
+             <div class="content-wrapper">
+                 <img src="tiger-7867624_640.jpg SINGAPOUR TIGRE.jpg" alt="Description de l'image" class="tokyoimg" style="float: left;>
+                 
+                 <div style="float: left;">
+                     <h1 class="titredetokyo">04</h1>
+                     <p>Explorez la magie de la nature au cœur de Singapour en visitant le célèbre zoo de la ville. Niché au milieu de luxuriante végétation tropicale, 
+                      le zoo de Singapour est une oasis de biodiversité où les visiteurs peuvent découvrir une incroyable variété d'animaux sauvages, 
+                      des plus emblématiques aux plus rares.Le zoo de Singapour offre une expérience immersive où les visiteurs peuvent observer de près des créatures fascinantes dans des habitats soigneusement recréés pour imiter leurs environnements naturels.
+                       Rencontrez les majestueux lions, les éléphants élégants,
+                       les gracieux girafes et bien d'autres encore lors d'une promenade à travers les différents habitats du zoo.</p>
+                 </div>
+             </div>
+         </div>
+
+
+<style>
+         @keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Appliquer l'animation à l'image */
+.tokyoimg {
+  transition: transform 0.2s; /* Ajoute une transition pour un effet plus doux */
+}
+
+/* Ajouter la classe d'animation lorsque la souris survole l'image */
+.tokyoimg:hover {
+  animation: rotation 4s linear infinite;
+}
+</style>
+      
+         
+
+         <style>
+            .carousel-container {
+              width: 100%;
+              overflow: hidden;
+              position: relative;
+              background: linear-gradient(to bottom, #ff7700, #fffb00); /* Rouge à rose */
+            }
+          
+            .carousel-track {
+              display: flex;
+              animation: scroll 120s linear infinite;
+            }
+          
+            @keyframes scroll {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-100%);
+              }
+            }
+          
+            .carousel-item {
+              flex: 0 0 auto;
+              width: 50%;
+              max-width: 30%;
+            }
+          </style>
+
+          <center>
+          <div class="carousel-container">
+            <h1>GALERIE</h1>
+
+            <div class="carousel-track">
+              <img class="carousel-item" src="singapore-3243838_640.jpg 7.jpg" alt="Image 1"height="600" width="600">
+              <img class="carousel-item" src="singapore-404290_960_720.jpg 1.jpg" alt="Image 2"height="600" width="600">
+              <img class="carousel-item" src="singapore-5817283_640.jpg 6.jpg" alt="Image 3"height="600" width="600">
+              <img class="carousel-item" src="singapore-6664410_640.jpg 4.jpg" alt="Image 4"height="600" width="600">
+            </div>
+          </div>
+        </center>
+           
+
+
+           
+
+                 <!-- video de la page -->
+
+                 <div class="video-container">
+                  <video autoplay controls>
+                      <source src="Singapour en video.mp4" type="video/mp4">
+                  </video>
+              </div>
+        
+        
+              <style>
+                .video-container {
+                    position: relative;
+                    width: 100%;
+                    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+                    overflow: hidden;
+                    background: linear-gradient(135deg, #FFD700, #FFA500);
+                    border-radius: 2%;
+                }
+                
+                .video-container video {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                </style>
+
+
+
+
+        <footer class="pied">
+
+    
+            <center>
+            
+                <ul class="social-media-list">
+            
+                    <li>
+                      <a href="#" class="social-link facebook">
+                        
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        
+                        <span> - Facebook</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="social-link twitter">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <span> - Twitter</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="social-link google">
+                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                        <span> - Google</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="social-link instagram">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <span> - Instagram</span>
+            
+            
+                      </a>
+                    </li>
+                  </ul>
+            
+            
+            
+                  </center>
+                  
+            
+            </footer>
+
+  
+</body>
+
+
+
+</html>

@@ -1,0 +1,307 @@
+
+/* couleur et background du site avec l'entete */
+   
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed');
+
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background-image: url(travel.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Saira Extra Condensed', sans-serif;
+      letter-spacing: 1px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    max-height: 500px; /* Ajout d'une hauteur maximale pour les écrans plus petits */
+    overflow: hidden;
+    border-radius: 1%;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.slide h2 {
+    font-size: 2em;
+}
+
+.pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.pagination button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button.active {
+    background-color: #333;
+}
+
+
+
+
+
+/* logo du site en css */
+
+
+.logo img {
+    max-width : 200px;
+    max-height : 150px;
+    background-color: rgba(10, 70, 148, 0.438);
+    border-radius: 20px; /* Coins arrondis de 20px */
+
+    }
+
+
+
+
+
+    /* menu de la page contact  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles de base */
+.menudusite {
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 2%;
+}
+
+.menudusite ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menudusite ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menudusite ul li:last-child {
+    margin-right: 0;
+}
+
+.menudusite ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menudusite ul li a:hover {
+    color: #ffd700;
+}
+
+/* Styles pour le menu déroulant */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+ /* pour le formulaire css  */
+
+
+ .form-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%; /* Ajustement pour occuper toute la largeur */
+    max-width: 400px; /* Limitation de la largeur pour une meilleure lisibilité */
+    margin: 0 auto; /* Centre le formulaire horizontalement */
+}
+
+.form-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+    width: 100%;
+    height: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+    width: calc(100% - 22px); /* Largeur ajustée pour les bordures */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%; /* Le bouton s'étend sur toute la largeur */
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+
+
+
+/* LE CSS DU MAP GOOGLE */
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    position: relative;
+    height: 0;
+    border-radius: 1%;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+
+
+
+/* FOOTER LE PIED DE PAGE  */
+
+
+
+.pied {
+    background-color: #333;
+  }
+  
+  .social-link {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .social-link:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(200, 255, 0); /* Fond transparent */
+    transition: background-color 0.3s ease;
+    z-index: -1;
+  }
+  
+  .social-link:hover:before {
+    background-color: rgb(255, 255, 255); /* Fond transparent avec opacité */
+  }
+  
+  
+  
+  .COPYRIGHT {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+
+
+
+

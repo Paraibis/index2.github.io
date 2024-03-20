@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations de voyage</title>
+    <link rel="stylesheet" href="styles.css">
+
+   
+</head>
+
+<body>
+
+
+    <center>
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+    </center>
+    
+    <!-- Menu -->
+    
+    
+    <center>
+    
+        <nav class="menudusite">
+            <ul>
+                <li><a href="index.html">ACCUEIL</a></li>
+    
+    
+                <!-- Menu -->
+    
+    <li class="dropdown">
+        <a href="#" class="dropbtn">DESTINATIONS</a>
+        <div class="dropdown-content">
+            <a href="tokyo.html">TOKYO</a>
+            <a href="newyork.html">NEWYORK</a>
+            <a href="singapour.html">SINGAPOUR</a>
+            <a href="moscou.html">MOSCOU</a>
+            <a href="montreal.html">MONTREAL</a>
+        </div>
+    </li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    
+    
+    </center>
+    
+    
+         <!-- SLIDER DE CONTACT -->
+    
+        <div class="slider-container">
+            <div class="slider">
+                
+                <div class="slide" style="background-image: url('8.jpg');">
+                    <div class="slide-content">
+                        <h1 style="color: azure;">Bienvenue à New York, la ville qui ne dort jamais</h1>
+                        
+                    </div>
+                </div>
+                <!-- Ajoutez plus de diapositives au besoin -->
+            </div>
+            <div class="pagination"></div>
+        </div>
+    
+        
+    
+        <script>
+            const slides = document.querySelectorAll('.slide');
+            const pagination = document.querySelector('.pagination');
+    
+            slides.forEach((slide, index) => {
+                const button = document.createElement('button');
+                button.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+                pagination.appendChild(button);
+            });
+    
+            let slideIndex = 0;
+            const updatePagination = () => {
+                const buttons = pagination.querySelectorAll('button');
+                buttons.forEach((button, index) => {
+                    if (index === slideIndex) {
+                        button.classList.add('active');
+                    } else {
+                        button.classList.remove('active');
+                    }
+                });
+            };
+    
+            const goToSlide = (index) => {
+                slideIndex = index;
+                const slideWidth = slides[0].clientWidth;
+                document.querySelector('.slider').style.transform = `translateX(${-slideWidth * index}px)`;
+                updatePagination();
+            };
+    
+            updatePagination();
+    
+            // Auto play
+            setInterval(() => {
+                slideIndex = (slideIndex + 1) % slides.length;
+                goToSlide(slideIndex);
+            }, 5000);
+        </script>
+
+
+
+
+         <!-- description 01 tokyo -->
+
+
+
+
+<div class="clearfix"></div>
+
+<div class="div-categoryContainer">
+
+    <div class="content-wrapper">
+        
+        <h1 class="titredetokyo">01</h1>
+        &nbsp 
+        &nbsp 
+        <p>Central Park a été le premier parc paysager des États-Unis.
+          Sa création a été proposée pour la première fois dans les années 1840.
+          Le Ramble et le Lac : Un espace naturel sinueux et boisé, idéal pour les promenades et l’observation des oiseaux.
+          Hallett Nature Sanctuary : Une réserve naturelle préservée au cœur du parc.
+          Le Réservoir Jacqueline Kennedy Onassis : Un lieu paisible pour la course à pied et la méditation.
+          Sheep Meadow : Une grande pelouse où les New-Yorkais se détendent et pique-niquent.
+          Wollman Rink : Une patinoire saisonnière.</p>
+        
+        <img src="central parc.jpg" alt="Description de l'image" class="tokyoimg">
+        
+    </div>
+</div>
+
+
+
+
+         <!-- description 02 new york -->
+
+
+
+         <div class="clearfix"></div>
+
+         <div class="div-categoryContainer">
+         
+             <div class="content-wrapper">
+                 <img src="VAC NEW YORK.jpg" alt="Description de l'image" class="tokyoimg" style="float: left;>
+                 
+                 <div style="float: left;">
+                     <h1 class="titredetokyo">02</h1>
+                     <p> le parc d'attractions de Coney Island et sa grande roue, le long de l'océan. Après avoir eu la peur de sa vie au Thunderbolt ou au Cyclone,
+                       et gagné ce gigantesque ours en peluche (dont on sait pourtant qu'il ne rentrera jamais dans la valise), rien de tel qu'un bain frais dans l'Atlantique.
+                        Il ne faut pas espérer trouver ici le repos solitaire : les manèges attirent une foule permanente.
+                         Mais on vient aussi pour la douce folie de ce remblai où l'on fait la queue pour s'offrir glaces et hot-dogs, entre montreurs de serpents et hurlements aigus venant des montagnes russes. Au-delà des manèges à sensation, 
+                         on est séduit par le romantisme des reflets des lumières du parc d'attractions sur l'eau, visibles depuis le ponton lorsque la lumière décline..</p>
+                 </div>
+             </div>
+         </div>
+
+
+         <style>
+          .tokyoimg {
+              /* Ajoutez d'autres styles nécessaires */
+              animation: zoom-in 10s ease forwards;
+          }
+      
+          @keyframes zoom-in {
+              from {
+                  transform: scale(0);
+              }
+              to {
+                  transform: scale(1);
+              }
+          }
+          
+          .titredetokyo {
+              /* Ajoutez d'autres styles nécessaires */
+              animation: zoom-in 10s ease forwards;
+          }
+      
+          @keyframes zoom-in {
+              from {
+                  transform: scale(0);
+              }
+              to {
+                  transform: scale(1);
+              }
+          }
+          
+      </style>
+      </style>
+
+      
+
+
+          <!-- description 03 tokyo -->
+
+
+
+
+<div class="clearfix"></div>
+
+<div class="div-categoryContainer">
+
+    <div class="content-wrapper">
+        
+        <h1 class="titredetokyo">03</h1>
+        &nbsp 
+        &nbsp 
+        <p>Mac and Cheese : Ce plat de pâtes crémeux au fromage est un incontournable.<br>
+          Le meilleur mac and cheese du monde se trouverait chez Beecher’s, <br>
+          un artisan fromager. Plus il y a de fils de fromage, mieux c’est ..<br>
+          Bagel au saumon fumé et cream cheese : Le bagel, reconnaissable à 
+          son pain circulaire troué au centre, est un vrai incontournable du
+          brunch dominical new yorkais. Ess a Bagel et Murray’s Bagel sont 
+          des adresses à ne pas manquer</p>
+
+        <img src="9.jpg" alt="Description de l'image" class="tokyoimg" class="zoom">
+    </div>
+</div>
+
+
+
+
+         <!-- description 04 tokyo -->
+
+
+
+         <div class="clearfix"></div>
+
+         <div class="div-categoryContainer">
+         
+             <div class="content-wrapper">
+                 <img src="NEW YORK CITY 23.jpg" alt="Description de l'image" class="tokyoimg" style="float: left;>
+                 
+                 <div style="float: left;">
+                     <h1 class="titredetokyo">04</h1>
+                     <p>Le pont de Brooklyn incarne l'essence même de New York : majestueux, emblématique et chargé d'histoire. 
+                      Enjambant gracieusement l'East River, ce chef-d'œuvre d'ingénierie est bien plus qu'un simple pont - 
+                      c'est un symbole de la ville et un incontournable de toute visite à New York.
+
+                      Construit au XIXe siècle, le pont de Brooklyn relie les quartiers de Manhattan et de Brooklyn,
+                       offrant une vue imprenable sur le skyline de la ville, avec l'Empire State Building se dressant fièrement à l'horizon
+                        et la silhouette caractéristique de la statue de la Liberté à l'arrière-plan.
+                       Marcher sur le pont de Brooklyn, avec ses câbles d'acier filant vers le ciel et ses planches de bois résonnant sous vos pas,
+                        est une expérience à couper le souffle. Que ce soit au lever du soleil,
+                         lorsque les premiers rayons embrassent les gratte-ciel de Manhattan, ou au crépuscule, 
+                         lorsque les lumières de la ville scintillent dans la nuit, chaque moment passé sur ce pont emblématique est empreint de magie.
+                      
+                      Le pont de Brooklyn est bien plus qu'un simple moyen de traverser l'East River - c'est un lieu de rencontre,
+                       un symbole de connexion et un témoignage de la résilience et de la créativité humaine. 
+                       Que vous soyez un habitant de longue date de la ville ou un visiteur émerveillé par son énergie unique, 
+                       une promenade sur le pont de Brooklyn est une expérience inoubliable qui vous transportera au cœur même 
+                       de l'âme de New York.
+                      
+                              
+                      </p>
+                 </div>
+             </div>
+         </div>
+
+
+ 
+
+         
+      
+         
+
+         <style>
+            .carousel-container {
+              width: 100%;
+              overflow: hidden;
+              position: relative;
+              background: linear-gradient(to bottom, #ff7700, #fffb00); /* Rouge à rose */
+            }
+          
+            .carousel-track {
+              display: flex;
+              animation: scroll 120s linear infinite;
+            }
+          
+            @keyframes scroll {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-100%);
+              }
+            }
+          
+            .carousel-item {
+              flex: 0 0 auto;
+              width: 50%;
+              max-width: 30%;
+            }
+          </style>
+
+          <center>
+          <div class="carousel-container">
+            <h1>GALERIE</h1>
+
+            <div class="carousel-track">
+              <img class="carousel-item" src="7.jpg" alt="Image 1" height="600" width="600">
+              <img class="carousel-item" src="NEW YORK3.avif" alt="Image 2" height="600" width="600">
+              <img class="carousel-item" src="NEW YORK4.jpg" alt="Image 3"height="600" width="600">
+              <img class="carousel-item" src="NEW YORK CITY22.jpg" alt="Image 4"height="600" width="600">
+            </div>
+          </div>
+        </center>
+           
+
+
+           
+
+                 <!-- video de la page -->
+
+                 <div class="video-container">
+                    <video autoplay controls>
+                        <source src="New York en video.mp4" type="video/mp4">
+                    </video>
+                </div>
+          
+          
+                <style>
+                  .video-container {
+                      position: relative;
+                      width: 100%;
+                      padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+                      overflow: hidden;
+                      background: linear-gradient(135deg, #FFD700, #FFA500);
+                      border-radius: 2%;
+                  }
+                  
+                  .video-container video {
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                  }
+                  </style>
+
+
+
+
+
+        <footer class="pied">
+
+    
+            <center>
+            
+                <ul class="social-media-list">
+            
+                    <li>
+                      <a href="#" class="social-link facebook">
+                        
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        
+                        <span> - Facebook</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="social-link twitter">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <span> - Twitter</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="social-link google">
+                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                        <span> - Google</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="social-link instagram">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <span> - Instagram</span>
+            
+            
+                      </a>
+                    </li>
+                  </ul>
+            
+            
+            
+                  </center>
+                  
+            
+            </footer>
+
+  
+</body>
+
+
+
+</html>

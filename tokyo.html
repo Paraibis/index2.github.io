@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations de voyage</title>
+    <link rel="stylesheet" href="styles.css">
+
+   
+</head>
+
+<body>
+
+    <center>
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+    </center>
+    
+    <!-- Menu -->
+    
+    
+    <center>
+    
+        <nav class="menudusite">
+            <ul>
+                <li><a href="index.html">ACCUEIL</a></li>
+    
+    
+                <!-- Menu -->
+    
+    <li class="dropdown">
+        <a href="#" class="dropbtn">DESTINATIONS</a>
+        <div class="dropdown-content">
+            <a href="tokyo.html">TOKYO</a>
+            <a href="newyork.html">NEWYORK</a>
+            <a href="singapour.html">SINGAPOUR</a>
+            <a href="moscou.html">MOSCOU</a>
+            <a href="montreal.html">MONTREAL</a>
+        </div>
+    </li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    
+    
+    </center>
+    
+    
+         <!-- SLIDER DE CONTACT -->
+    
+        <div class="slider-container">
+            <div class="slider">
+                
+                <div class="slide" style="background-image: url('imagetokyo.jpg');">
+                    <div class="slide-content">
+                        <h1 style="color: azure;">Bienvenue à Tokyo, la capitale dynamique du Japon</h1>
+                    </div>
+                </div>
+                <!-- Ajoutez plus de diapositives au besoin -->
+            </div>
+            <div class="pagination"></div>
+        </div>
+    
+        
+    
+        <script>
+            const slides = document.querySelectorAll('.slide');
+            const pagination = document.querySelector('.pagination');
+    
+            slides.forEach((slide, index) => {
+                const button = document.createElement('button');
+                button.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+                pagination.appendChild(button);
+            });
+    
+            let slideIndex = 0;
+            const updatePagination = () => {
+                const buttons = pagination.querySelectorAll('button');
+                buttons.forEach((button, index) => {
+                    if (index === slideIndex) {
+                        button.classList.add('active');
+                    } else {
+                        button.classList.remove('active');
+                    }
+                });
+            };
+    
+            const goToSlide = (index) => {
+                slideIndex = index;
+                const slideWidth = slides[0].clientWidth;
+                document.querySelector('.slider').style.transform = `translateX(${-slideWidth * index}px)`;
+                updatePagination();
+            };
+    
+            updatePagination();
+    
+            // Auto play
+            setInterval(() => {
+                slideIndex = (slideIndex + 1) % slides.length;
+                goToSlide(slideIndex);
+            }, 5000);
+        </script>
+
+
+
+
+         <!-- description 01 tokyo -->
+
+
+
+
+<div class="clearfix"></div>
+
+<div class="div-categoryContainer">
+
+    <div class="content-wrapper">
+        
+        <h1 class="titredetokyo">01</h1>
+        &nbsp 
+        &nbsp 
+        <p> Tokyo, la capitale dynamique du Japon où tradition et modernité se rencontrent pour créer une expérience urbaine incomparable.
+           Tokyo est une métropole tentaculaire, pulsante d'énergie,où chaque coin de rue raconte une histoire fascinante.</p>
+        <img src="toktok.jpg" alt="Description de l'image" class="tokyoimg">
+    </div>
+</div>
+
+
+<style>
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.tokyoimg {
+  animation: slide 2s ease infinite;
+}
+.titredetokyo 
+{
+  animation: slide 2s ease infinite;
+
+}
+</style>
+
+
+
+         <!-- description 02 tokyo -->
+
+
+
+         <div class="clearfix"></div>
+
+         <div class="div-categoryContainer">
+         
+             <div class="content-wrapper">
+                 <img src="tok japon.jpg" alt="Description de l'image" class="tokyoimg" style="float: left;>
+                 
+                 <div style="float: left;">
+                     <h1 class="titredetokyo">02</h1>
+                     <p>Au cœur de cette mégapole se trouve une juxtaposition étonnante d'ancien et de nouveau. Des temples millénaires comme le célèbre Senso-ji à Asakusa se dressent fièrement à côté de gratte-ciel étincelants et de quartiers ultramodernes comme Shibuya et Shinjuku. Perdez-vous dans les ruelles étroites de Yanaka pour découvrir un aperçu de l'ancien Edo, ou plongez dans l'effervescence de la vie nocturne de Roppongi pour une soirée mémorable.</p>
+                 </div>
+             </div>
+         </div>
+
+
+
+
+
+          <!-- description 03 tokyo -->
+
+
+
+
+<div class="clearfix"></div>
+
+<div class="div-categoryContainer">
+
+    <div class="content-wrapper">
+        
+        <h1 class="titredetokyo">03</h1>
+        &nbsp 
+        &nbsp 
+        <p>Tokyo est également un paradis pour les amateurs de cuisine. Des stands de ramen modestes aux restaurants étoilés au guide Michelin, la diversité culinaire de la ville est à couper le souffle. Ne manquez pas de déguster des sushis frais au marché aux poissons de Tsukiji ou de savourer des délices de rue dans les quartiers animés comme Harajuku.</p>
+
+        <img src="to gastronomie-japonaise.jpg" alt="Description de l'image" class="tokyoimg" class="zoom">
+    </div>
+</div>
+
+
+
+
+         <!-- description 04 tokyo -->
+
+
+
+         <div class="clearfix"></div>
+
+         <div class="div-categoryContainer">
+         
+             <div class="content-wrapper">
+                 <img src="img_index_modal_001.jpg TOKYO JAPON2.jpg" alt="Description de l'image" class="tokyoimg" style="float: left;>
+                 
+                 <div style="float: left;">
+                     <h1 class="titredetokyo">04</h1>
+                     &nbsp 
+                     &nbsp
+                     <p>Les hôtels de luxe à Tokyo ne manquent pas de faire tourner les têtes, 
+                      offrant des vues panoramiques sur la ville, des intérieurs élégants et 
+                      des services dignes de la royauté. Des établissements emblématiques tels 
+                      que le Park Hyatt Tokyo, rendu célèbre par le film "Lost in Translation", 
+                      et le Mandarin Oriental Tokyo, situé dans la tour Nihonbashi Mitsui, 
+                      offrent une expérience incomparable de l'hospitalité japonaise.</p>
+                 </div>
+             </div>
+         </div>
+
+
+ 
+      
+         
+
+         <style>
+            .carousel-container {
+              width: 100%;
+              overflow: hidden;
+              position: relative;
+              background: linear-gradient(to bottom, #ff7700, #fffb00); /* Rouge à rose */
+            }
+          
+            .carousel-track {
+              display: flex;
+              animation: scroll 120s linear infinite;
+            }
+          
+            @keyframes scroll {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-100%);
+              }
+            }
+          
+            .carousel-item {
+              flex: 0 0 auto;
+              width: 50%;
+              max-width: 30%;
+            }
+            
+          </style>
+
+          <center>
+          <div class="carousel-container">
+            <h1>GALERIE</h1>
+
+            <div class="carousel-track">
+              <img class="carousel-item" src="tokyo japon .jpg" alt="Image 1"height="600" width="600">
+              <img class="carousel-item" src="CITE DE TOKYO.jpg"alt="Image 2"height="600" width="600">
+              <img class="carousel-item" src="CITE DE TOKYO1.jpg" alt="Image 3"height="600" width="600">
+              <img class="carousel-item" src="tokyo-tokyo-dome-city-209938.jpg TOKYO JAPON3.jpg" alt="Image 4"height="600" width="600">
+            </div>
+          </div>
+        </center>
+           
+
+
+           
+
+                 <!-- video de la page -->
+
+                 <div class="video-container">
+                  <video autoplay controls>
+                      <source src="Tokyo en video .mp4" type="video/mp4">
+                  </video>
+              </div>
+        
+        
+              <style>
+                .video-container {
+                    position: relative;
+                    width: 100%;
+                    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+                    overflow: hidden;
+                    background: linear-gradient(135deg, #FFD700, #FFA500);
+                    border-radius: 2%;
+                }
+                
+                .video-container video {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                </style>
+
+
+
+        <footer class="pied">
+
+    
+            <center>
+            
+                <ul class="social-media-list">
+            
+                    <li>
+                      <a href="#" class="social-link facebook">
+                        
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        
+                        <span> - Facebook</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="social-link twitter">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <span> - Twitter</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="social-link google">
+                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                        <span> - Google</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="social-link instagram">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <span> - Instagram</span>
+            
+            
+                      </a>
+                    </li>
+                  </ul>
+            
+            
+            
+                  </center>
+                  
+            
+            </footer>
+
+      
+</body>
+
+
+
+</html>

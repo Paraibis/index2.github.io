@@ -1,0 +1,735 @@
+
+/* couleur et background du site avec l'entete */
+   
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed');
+
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Saira Extra Condensed', sans-serif;
+      letter-spacing: 1px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-image: url(travel.jpg);
+      background-size: cover; /* Pour que l'image de fond couvre tout le site */
+  }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
+    header {
+      text-align: center;
+      padding: 0.5rem 0 5rem;
+      font-size: 1.25rem;
+    }
+    
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    li {
+      display: inline-flex;
+    }
+    
+    a {
+      position: relative;
+      padding: 1rem 0 0.5rem;
+      margin: 0 1.5rem;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: 50% 50%;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(255,255,255,0.8);
+        transition: transform 250ms;
+      }
+      
+      &:hover {
+        
+        &::after {
+          transform: translateX(-50%) scaleX(1);
+        }
+        
+      }
+      
+    }
+
+/* le css des defilement de limage photo accueil */
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.destination-container {
+    width: 300px; /* Ajustez la largeur selon vos besoins */
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.modern-button {
+  background-color: rgba(15, 11, 125, 0.727);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modern-button:hover {
+  background-color: #45a049; /* Darker Green */
+}
+
+
+.destination-container:hover {
+    transform: scale(1.05);
+}
+
+.destination-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.destination-text {
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+
+
+
+
+/* Style pour le menu déroulant */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #083492;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/*.menudusite {
+    background-color: rgba(10, 70, 148, 0.438);
+    border-radius: 20px;size-adjust: auto;
+}
+*/
+  
+
+
+/* description du site le css est la des apres le menu*/
+
+.destination {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 70px;
+    padding: 50px;
+    margin: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
+    height: auto;
+    width: auto;
+   
+
+}
+
+.destination:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.destination h2 {
+    color: #333333;
+    text-align: center;
+    margin-top: 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.destination:hover h2 {
+    color: #0077ffd3;
+}
+  
+
+
+
+/* logo du site en css */
+
+
+.logo img {
+    max-width : 200px;
+    max-height : 150px;
+    background-color: rgba(10, 70, 148, 0.438);
+    border-radius: 20px; /* Coins arrondis de 20px */
+
+    }
+
+
+
+/* image avec le text a droite gauche pour voir les regions a visiter */
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  position: relative;
+  width: 1000px; /* Modifier la largeur selon votre besoin */
+  height: auto; /* Ajustez la hauteur en conséquence */
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Modifier l'opacité si nécessaire */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: -100%; /* Position initial, décalé à gauche de 100% de la largeur */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease; /* Transition de la propriété left */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container:hover .overlay {
+  left: 0; /* Lors du survol, revenir à la position 0 (non décalé) */
+}
+
+
+
+
+/* pourqoi nous choisir */
+
+
+
+
+
+
+.container {
+  max-width: 800px;
+  margin: 5px auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.reasons {
+  list-style: none;
+  padding: 0;
+}
+
+.reasons li {
+  margin: 20px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 0.5s forwards;
+}
+
+.reasons li:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+.reasons li:nth-child(even) {
+  animation-delay: 0.4s;
+}
+
+.reasons li span {
+  display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* voici le css de pourqoi nous choisir */
+
+
+.titre {
+  position: relative;
+  display: inline-block;
+}
+
+.titre h1 {
+  font-size: 55px; /* Ajustez la taille de la police selon vos besoins */
+  transition: transform 0.3s ease; /* Ajoute une transition fluide */
+}
+
+.titre:hover h1 {
+  transform: translateY(-5px); /* Déplace légèrement vers le haut au survol */
+}
+
+
+
+
+/* activite a faire le css */
+
+
+
+.activite {
+  background-color: rgba(255, 255, 255, 0.601); /* Fond blanc semi-transparent */
+  padding: 20px; /* Ajout de marge intérieure pour l'espace autour du diaporama */
+  border-radius: 2%;
+}
+
+.diaporama {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.photo {
+  flex: 1; /* Ajout d'une propriété flex-grow pour que chaque photo prenne la même quantité d'espace */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.photo:hover {
+  transform: scale(1.05);
+}
+
+.photo img {
+  width: 400%; /* Modification de la largeur de l'image pour remplir complètement son conteneur */
+  height: auto;
+  display: block;
+}
+
+.description {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.photo:hover .description {
+  opacity: 1;
+}
+
+
+
+
+
+
+/* FOOTER LE PIED DE PAGE  */
+
+
+
+
+
+
+.pied {
+  background-color: #333;
+}
+
+.social-link {
+  position: relative;
+  display: inline-block;
+}
+
+.social-link:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(200, 255, 0); /* Fond transparent */
+  transition: background-color 0.3s ease;
+  z-index: -1;
+}
+
+.social-link:hover:before {
+  background-color: rgb(255, 0, 0); /* Fond transparent avec opacité */
+}
+
+
+
+.COPYRIGHT {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+
+
+
+/* css du slider tokyo */
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  background-image: url(travel.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: 'Saira Extra Condensed', sans-serif;
+    letter-spacing: 1px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 700px; /* Ajout d'une hauteur maximale pour les écrans plus petits */
+  overflow: hidden;
+  opacity: 90%;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.slide h2 {
+  font-size: 2em;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.pagination button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  opacity:0;
+}
+
+.pagination button.active {
+  background-color: #333;
+  opacity:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+    /* menu de la page tokyo en css  */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  /* Styles de base */
+  .menudusite {
+      background-color: #333;
+      padding: 10px 20px;
+  }
+  
+  .menudusite ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+     
+  }
+  
+  .menudusite ul li {
+      display: inline-block;
+      margin-right: 20px;
+  }
+  
+  .menudusite ul li:last-child {
+      margin-right: 0;
+  }
+  
+  .menudusite ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+  }
+  
+  .menudusite ul li a:hover {
+      color: #ffd700;
+  }
+  
+  /* Styles pour le menu déroulant */
+  .dropdown {
+      position: relative;
+  }
+  
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      z-index: 1;
+  }
+  
+  .dropdown-content a {
+      color: #fff;
+      padding: 12px 16px;
+      display: block;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-content a:hover {
+      background-color: hsl(0, 0%, 33%);
+  }
+  
+  .dropdown:hover .dropdown-content {
+      display: block;
+  }
+  
+
+
+
+
+    /* la page tokyo en css texte et image  */
+
+
+
+
+
+
+.div-categoryContainer{
+	box-sizing: border-box;
+	margin: 0px auto 10px;
+	padding: 90px;
+	width:auto; min-height: 100px;
+background-color: rgba(255, 0, 0, 0.834) ;
+	font-size: 1em;
+	color: 
+#000000;
+background: linear-gradient(to bottom, #ffcc00, #ff6600);
+height: 600;
+width: 800;
+
+}
+
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+ 
+}
+
+
+
+.content-wrapper p {
+  flex: 1;
+}
+
+.content-wrapper img {
+  flex: 1;
+  max-width: 60%;
+  height: auto;
+  margin-left: 20px; /* Espace à droite de l'image */
+}
+
+.tokyoimg{
+  border-radius: 2%;
+  width: 200%;
+  height: 300%;
+}
+
+
+@media only screen and (max-width: 600px) {
+  /* Ajoutez ici vos styles spécifiques pour les appareils de petite taille */
+}
+
+/* Par exemple, pour les tablettes */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Ajoutez ici vos styles spécifiques pour les tablettes */
+}
+
+/* Par exemple, pour les ordinateurs de bureau */
+@media only screen and (min-width: 1025px) {
+  /* Ajoutez ici vos styles spécifiques pour les ordinateurs de bureau */
+}
+
+.titredetokyo{
+font-size: 200px; /* Taille du texte pour les titres h1 */
+}
+
+.zoom {
+  animation: zoomAnimation 2s infinite alternate; /* 2 secondes, en boucle */
+}
+
+@keyframes zoomAnimation {
+  0% {
+      transform: scale(1); /* Taille normale */
+  }
+  100% {
+      transform: scale(1.2); /* Zoom à 120% */
+  }
+}
+
+.carousel-item {
+  border-radius: 80%;
+  background-color: #ff6600;
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations de voyage</title>
+    <link rel="stylesheet" href="styles.css">
+
+   
+</head>
+
+<body>
+
+
+    <center>
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+    </center>
+    
+    <!-- Menu -->
+    
+    
+    <center>
+    
+        <nav class="menudusite">
+            <ul>
+                <li><a href="index.html">ACCUEIL</a></li>
+    
+    
+                <!-- Menu -->
+    
+    <li class="dropdown">
+        <a href="#" class="dropbtn">DESTINATIONS</a>
+        <div class="dropdown-content">
+            <a href="tokyo.html">TOKYO</a>
+            <a href="newyork.html">NEWYORK</a>
+            <a href="singapour.html">SINGAPOUR</a>
+            <a href="moscou.html">MOSCOU</a>
+            <a href="montreal.html">MONTREAL</a>
+        </div>
+    </li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    
+    
+    </center>
+    
+    
+         <!-- SLIDER DE CONTACT -->
+    
+        <div class="slider-container">
+            <div class="slider">
+                
+                <div class="slide" style="background-image: url('moussssss.jpeg');">
+                    <div class="slide-content">
+                        <h2 style="color: rgb(11, 12, 12);"> Bienvenue a MOSCOU</h2>
+                       
+                    </div>
+                </div>
+                <!-- Ajoutez plus de diapositives au besoin -->
+            </div>
+            <div class="pagination"></div>
+        </div>
+    
+        
+    
+        <script>
+            const slides = document.querySelectorAll('.slide');
+            const pagination = document.querySelector('.pagination');
+    
+            slides.forEach((slide, index) => {
+                const button = document.createElement('button');
+                button.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+                pagination.appendChild(button);
+            });
+    
+            let slideIndex = 0;
+            const updatePagination = () => {
+                const buttons = pagination.querySelectorAll('button');
+                buttons.forEach((button, index) => {
+                    if (index === slideIndex) {
+                        button.classList.add('active');
+                    } else {
+                        button.classList.remove('active');
+                    }
+                });
+            };
+    
+            const goToSlide = (index) => {
+                slideIndex = index;
+                const slideWidth = slides[0].clientWidth;
+                document.querySelector('.slider').style.transform = `translateX(${-slideWidth * index}px)`;
+                updatePagination();
+            };
+    
+            updatePagination();
+    
+            // Auto play
+            setInterval(() => {
+                slideIndex = (slideIndex + 1) % slides.length;
+                goToSlide(slideIndex);
+            }, 5000);
+        </script>
+
+
+
+
+         <!-- description 01 tokyo -->
+
+
+
+
+<div class="clearfix"></div>
+
+<div class="div-categoryContainer">
+
+    <div class="content-wrapper">
+        
+        <h1 class="titredetokyo">01</h1>
+        &nbsp 
+        &nbsp 
+        <p>Croisières de nuit : Les croisières de nuit sur la Moskova sont particulièrement populaires
+           car elles offrent des vues spectaculaires sur les lumières scintillantes de la ville illuminée.
+            Ces croisières offrent souvent des dîners à bord et des spectacles de musique en direct pour 
+            une expérience encore plus mémorable.</p>
+
+        <img src="croisiere moscou.jpg" alt="Description de l'image" class="tokyoimg" class="zoom">
+    </div>
+</div>
+
+
+
+
+         <!-- description 02 tokyo -->
+
+
+
+         <div class="clearfix"></div>
+
+         <div class="div-categoryContainer">
+         
+             <div class="content-wrapper">
+                 <img src="MOUSCOU4.jpg" alt="Description de l'image" class="tokyoimg" style="float: left;>
+                 
+                 <div style="float: left;">
+                     <h1 class="titredetokyo">02</h1>
+                     <p>La cathédrale Saint-Basile-le-Bienheureux, également connue sous le nom de Basilique Saint-Basile, 
+                      est l'une des églises les plus emblématiques de Moscou, en Russie. Contrairement à ce que son nom pourrait suggérer,
+                       elle n'est pas une cathédrale au sens traditionnel du terme, car elle n'a jamais été le siège d'un évêché. Cependant,
+                 </div>
+             </div>
+         </div>
+
+
+
+
+
+          <!-- description 03 tokyo -->
+
+
+
+
+<div class="clearfix"></div>
+
+<div class="div-categoryContainer">
+
+    <div class="content-wrapper">
+        
+        <h1 class="titredetokyo">03</h1>
+        &nbsp 
+        &nbsp 
+        <p>La cuisine à Moscou est riche et variée, reflétant les traditions culinaires russes ainsi que l'influence des différentes cultures et régions du pays.
+           Voici un aperçu des éléments caractéristiques de la cuisine à Moscou :*
+           La cuisine à Moscou est riche et variée, reflétant les traditions culinaires russes ainsi que l'influence des différentes cultures et régions du pays.
+            Voici un aperçu des éléments caractéristiques de la cuisine à Moscou :</p>
+
+        <img src="donde-comer-m.avif CUISINE3.avif" alt="Description de l'image" class="tokyoimg" class="zoom">
+    </div>
+</div>
+
+
+
+
+         <!-- description 04 tokyo -->
+
+
+
+         <div class="clearfix"></div>
+
+         <div class="div-categoryContainer">
+         
+             <div class="content-wrapper">
+                 <img src="marche_noel_moscou_1.jpeg" alt="Description de l'image" class="tokyoimg" style="float: left;>
+                 
+                 <div style="float: left;">
+                     <h1 class="titredetokyo">04</h1>
+                     <p>Le marché de Noël à Moscou est une tradition populaire qui attire les habitants et les visiteurs pendant la période des fêtes de fin d'année.
+                       Voici quelques-uns des marchés de Noël les plus célèbres et les plus appréciés à Moscou :
+
+                      Marché de Noël sur la place Rouge : Le marché de Noël sur la place Rouge est l'un des plus 
+                      emblématiques de Moscou. Situé à proximité du Kremlin et de la cathédrale Saint-Basile-le-Bienheureux,
+                       ce marché offre une atmosphère féerique avec ses stands décorés, ses lumières scintillantes et ses attractions festives.
+                        Vous y trouverez une variété de cadeaux artisanaux, de décorations de Noël, de jouets,
+                         ainsi que des stands de nourriture proposant des spécialités russes et des boissons chaudes
+                          traditionnelles comme le vin chaud (glühwein) et le thé aux épices.</p>
+                 </div>
+             </div>
+         </div>
+ 
+
+ <style>
+
+  .tokyoimg {
+    transition: transform 0.3s ease-in-out;
+  }
+  .tokyoimg:hover {
+    transform: rotate(360deg);
+  }
+  
+  </style>     
+         
+
+         <style>
+            .carousel-container {
+              width: 100%;
+              overflow: hidden;
+              position: relative;
+              background: linear-gradient(to bottom, #ff7700, #fffb00); /* Rouge à rose */
+            }
+          
+            .carousel-track {
+              display: flex;
+              *ù§§
+              animation: scroll 120s linear infinite;
+            }
+          
+            @keyframes scroll {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-100%);
+              }
+            }
+          
+            .carousel-item {
+              flex: 0 0 auto;
+              width: 50%;
+              max-width: 30%;
+            }
+          </style>
+
+          <center>
+          <div class="carousel-container">
+            <h1>GALERIE</h1>
+
+            <div class="carousel-track">
+              <img class="carousel-item" src="mouscou11.jpg" alt="Image 1"height="600" width="600">
+              <img class="carousel-item" src="mouscou13.jpg" alt="Image 2"height="600" width="600">
+              <img class="carousel-item" src="MOUSCOU12.jpg" alt="Image 3"height="600" width="600">
+              <img class="carousel-item" src="MOUSCOU6.jpg" alt="Image 4"height="600" width="600">
+            </div>
+          </div>
+        </center>
+           
+
+           
+
+                 <!-- video de la page -->
+
+                 <div class="video-container">
+                  <video autoplay controls>
+                      <source src="moscou-en-video_Icp9hE4y.mp4" type="video/mp4">
+                  </video>
+              </div>
+        
+        
+              <style>
+                .video-container {
+                    position: relative;
+                    width: 100%;
+                    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+                    overflow: hidden;
+                    background: linear-gradient(135deg, #FFD700, #FFA500);
+                    border-radius: 2%;
+                }
+                
+                .video-container video {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                </style>
+
+
+        <footer class="pied">
+
+    
+            <center>
+            
+                <ul class="social-media-list">
+            
+                    <li>
+                      <a href="#" class="social-link facebook">
+                        
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        
+                        <span> - Facebook</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="social-link twitter">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <span> - Twitter</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="social-link google">
+                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                        <span> - Google</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="social-link instagram">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <span> - Instagram</span>
+            
+            
+                      </a>
+                    </li>
+                  </ul>
+            
+            
+            
+                  </center>
+                  
+            
+            </footer>
+
+  
+</body>
+
+
+
+</html>

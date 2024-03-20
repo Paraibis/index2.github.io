@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations de voyage</title>
+    <link rel="stylesheet" href="styles.css">
+
+   
+</head>
+
+<body>
+
+
+
+    <center>
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+    </center>
+    
+    <!-- Menu -->
+    
+    
+    <center>
+    
+        <nav class="menudusite">
+            <ul>
+                <li><a href="index.html">ACCUEIL</a></li>
+    
+    
+                <!-- Menu -->
+    
+    <li class="dropdown">
+        <a href="#" class="dropbtn">DESTINATIONS</a>
+        <div class="dropdown-content">
+            <a href="tokyo.html">TOKYO</a>
+            <a href="newyork.html">NEWYORK</a>
+            <a href="singapour.html">SINGAPOUR</a>
+            <a href="moscou.html">MOSCOU</a>
+            <a href="montreal.html">MONTREAL</a>
+        </div>
+    </li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    
+    
+    </center>
+    
+    
+         <!-- SLIDER DE CONTACT -->
+    
+        <div class="slider-container">
+            <div class="slider">
+                
+                <div class="slide" style="background-image: url('MOREL\ CHOUU.jpg');">
+                    <div class="slide-content">
+                        <h1 style="color: rgb(255, 255, 255);">Bienvenue à MONTREAL </h1>
+                    </div>
+                </div>
+                <!-- Ajoutez plus de diapositives au besoin -->
+            </div>
+            <div class="pagination"></div>
+        </div>
+    
+        
+        
+    
+        <script>
+            const slides = document.querySelectorAll('.slide');
+            const pagination = document.querySelector('.pagination');
+    
+            slides.forEach((slide, index) => {
+                const button = document.createElement('button');
+                button.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+                pagination.appendChild(button);
+            });
+    
+            let slideIndex = 0;
+            const updatePagination = () => {
+                const buttons = pagination.querySelectorAll('button');
+                buttons.forEach((button, index) => {
+                    if (index === slideIndex) {
+                        button.classList.add('active');
+                    } else {
+                        button.classList.remove('active');
+                    }
+                });
+            };
+    
+            const goToSlide = (index) => {
+                slideIndex = index;
+                const slideWidth = slides[0].clientWidth;
+                document.querySelector('.slider').style.transform = `translateX(${-slideWidth * index}px)`;
+                updatePagination();
+            };
+    
+            updatePagination();
+    
+            // Auto play
+            setInterval(() => {
+                slideIndex = (slideIndex + 1) % slides.length;
+                goToSlide(slideIndex);
+            }, 5000);
+        </script>
+
+
+
+
+         <!-- description 01 tokyo -->
+
+
+
+
+<div class="clearfix"></div>
+
+<div class="div-categoryContainer">
+
+    <div class="content-wrapper">
+        
+        <h1 class="titredetokyo">01</h1>
+        &nbsp 
+        &nbsp 
+        <p>Profitez de votre sortie en kayak pour explorer les environs de Montréal depuis une perspective unique.
+           Admirez les paysages, observez la faune locale et découvrez les attractions accessibles depuis l'eau.
+           Profitez de l'expérience : Le kayak peut être une activité relaxante et rafraîchissante. 
+           Prenez le temps de vous détendre, de vous amuser et de profiter de votre temps sur l'eau.
+           En suivant ces conseils, vous êtes prêt à vivre une expérience inoubliable de kayak à Montréal pendant vos vacances.</p>
+
+        <img src="MONTRE.jpg" alt="Description de l'image" class="tokyoimg" class="zoom">
+    </div>
+</div>
+
+
+
+
+         <!-- description 02 tokyo -->
+
+
+
+         <div class="clearfix"></div>
+
+         <div class="div-categoryContainer">
+         
+             <div class="content-wrapper">
+                 <img src="montreal go1.jpg" alt="Description de l'image" class="tokyoimg" style="float: left;>
+                 
+                 <div style="float: left;">
+                     <h1 class="titredetokyo">02</h1>
+                     <p>Partez à la découverte du Quartier des spectacles, le cœur culturel de Montréal,
+                       où vous trouverez de nombreux théâtres, salles de concert, galeries d'art, restaurants et bars.
+                        Consultez le calendrier des événements pour voir s'il y a des spectacles ou des festivals
+                         en cours pendant votre visite.Promenez-vous dans les rues pavées du Vieux-Montréal et admirez 
+                         l'architecture historique, les boutiques pittoresques et les charmantes places.
+                          Ne manquez pas la basilique Notre-Dame, la Place Jacques-Cartier et le musée Pointe-à-Callière,
+                           site historique et archéologique de Montréal.</p>
+                 </div>
+             </div>
+         </div>
+
+
+
+
+
+          <!-- description 03 tokyo -->
+
+
+
+
+<div class="clearfix"></div>
+
+<div class="div-categoryContainer">
+
+    <div class="content-wrapper">
+        
+        <h1 class="titredetokyo">03</h1>
+        &nbsp 
+        &nbsp 
+        <p>Le dîner à Montréal est une expérience à part entière. Explorez les rues pavées du Vieux-Montréal 
+          pour découvrir des restaurants haut de gamme proposant une cuisine française raffinée, ou dirigez-vous 
+          vers les quartiers branchés comme le Plateau-Mont-Royal ou le Mile End pour des options plus décontractées, 
+          comme des bistros chaleureux, des restaurants de cuisine fusion ou des pizzerias authentiques.</p>
+        <img src="MONTRAL GO4.jpg" alt="Description de l'image" class="tokyoimg" class="zoom">
+    </div>
+</div>
+
+
+
+
+         <!-- description 04 tokyo -->
+
+
+
+         <div class="clearfix"></div>
+
+         <div class="div-categoryContainer">
+         
+             <div class="content-wrapper">
+                 <img src="montreal go2.jpg" alt="Description de l'image" class="tokyoimg" style="float: left;>
+                 
+                 <div style="float: left;">
+                     <h1 class="titredetokyo">04</h1>
+                     <p>Bateau-Mouche sur le fleuve : Bateau-Mouche propose des croisières sur le fleuve Saint-Laurent, 
+                      offrant des vues spectaculaires sur la ville de Montréal et ses environs. Vous pouvez choisir parmi
+                       différentes options de croisières, y compris des croisières commentées avec des explications sur l'histoire
+                        et les sites touristiques de Montréal.
+                       Le Petit Navire : Cette compagnie offre des croisières sur des bateaux électriques écologiques,
+                       vous permettant de naviguer tranquillement le long du canal Lachine. Leurs croisières offrent 
+                       une atmosphère détendue et intimiste, idéale pour profiter des paysages de Montréal.</p>
+                 </div>
+             </div>
+         </div>
+
+
+
+
+         <style>
+          .tokyoimg {
+    animation: zoom 4s ease-in-out infinite alternate;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+         </style>
+ 
+      
+         
+
+         <style>
+            .carousel-container {
+              width: 100%;
+              overflow: hidden;
+              position: relative;
+              background: linear-gradient(to bottom, #ff7700, #fffb00); /* Rouge à rose */
+            }
+          
+            .carousel-track {
+              display: flex;
+              animation: scroll 120s linear infinite;
+            }
+          
+            @keyframes scroll {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-100%);
+              }
+            }
+          
+            .carousel-item {
+              flex: 0 0 auto;
+              width: 50%;
+              max-width: 30%;
+            }
+          </style>
+
+          <center>
+          <div class="carousel-container">
+            <h1>GALERIE</h1>
+
+            <div class="carousel-track">
+              <img class="carousel-item" src="MONTREAL GO3.jpg" alt="Image 1">
+              <img class="carousel-item" src="MONTREAL GO5.jpg" alt="Image 2">
+              <img class="carousel-item" src="montreal.jpg" alt="Image 3">
+              <img class="carousel-item" src="MONTREAL GO12.jpg" alt="Image 4">
+            </div>
+          </div>
+        </center>
+           
+
+                 <!-- video de la page -->
+
+        <div class="video-container">
+          <video autoplay controls>
+              <source src="Montréal en video.mp4" type="video/mp4">
+          </video>
+      </div>
+
+
+      <style>
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+            overflow: hidden;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            border-radius: 2%;
+        }
+        
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        </style>
+        
+
+
+        <footer class="pied">
+
+    
+            <center>
+            
+                <ul class="social-media-list">
+            
+                    <li>
+                      <a href="#" class="social-link facebook">
+                        
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        
+                        <span> - Facebook</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="social-link twitter">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <span> - Twitter</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="social-link google">
+                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                        <span> - Google</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="social-link instagram">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <span> - Instagram</span>
+            
+            
+                      </a>
+                    </li>
+                  </ul>
+            
+            
+            
+                  </center>
+                  
+            
+            </footer>
+
+  
+</body>
+
+
+
+</html>
